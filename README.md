@@ -20,11 +20,8 @@ scEGA is a deep clustering framework designed for single-cell analysis. It integ
 - Darmanis: [PubMed](https://pubmed.ncbi.nlm.nih.gov/26060301/)
 - Enge: [PubMed](https://pubmed.ncbi.nlm.nih.gov/28965763/)
 - Bjorklund: [GSE70580](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70580)
-- Sun.1: [GSE128066](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066)
+- Sun: [GSE128066](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066)
 - Fink: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1534580722004932)
-- Sun.2: [GSE128066](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066)
-- Sun.3: [GSE128066](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066)
-- Brown: [GSE137710](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137710)
 
 **Examples:**
 
