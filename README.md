@@ -1,5 +1,5 @@
 # scEGA: Exogenous Gene Information-Assisted Single-Cell Deep Clustering Framework
-
+![Franework](https://github.com/DayuHuu/scEGA/blob/master/scEGA.png)
 **Description:**
 
 scEGA is a deep clustering framework designed for single-cell analysis. It integrates cell and exogenous gene features simultaneously, aligning and fusing them during clustering to generate a more discriminative representation.
