@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import time
 import os
-import set_seed
 from sklearn import metrics
 from sklearn.metrics.cluster import adjusted_rand_score
 import datetime
@@ -54,8 +53,6 @@ n_clusters = args.n_clusters
 dropout_rate = args.dropout_rate
 f = open("./save/{}.txt".format(dataset_str),"a+")
 f.write(str(args))
-f.write("\n")
-f.write("seed = {}".format(set_seed.seed))
 f.write("\n")
 a=datetime.datetime.now()
 f.write(str(a))

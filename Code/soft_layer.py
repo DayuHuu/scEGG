@@ -1,5 +1,4 @@
 from __future__ import absolute_import
-import set_seed
 from keras import activations, constraints, initializers, regularizers
 from keras import backend as K
 from keras.layers import Layer, Dropout, LeakyReLU

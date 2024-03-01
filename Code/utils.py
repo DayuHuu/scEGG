@@ -21,7 +21,6 @@ from sklearn.cluster import KMeans
 from sklearn import metrics
 from sklearn.metrics.cluster import adjusted_rand_score
 from scipy.stats import spearmanr
-import set_seed
 
 def normalization(features_):
     features = features_.copy()
