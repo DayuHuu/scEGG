@@ -6,13 +6,12 @@ scEGA is a deep clustering framework designed for single-cell analysis. It integ
 
 **Requirements:**
 
-- Python 3.6.2
-- Pandas 1.1.5
-- TensorFlow 1.12.0
-- Keras 2.1.0
-- NumPy 1.19.5
-- SciPy 1.5.4
-- Scikit-learn 0.19.0
+
+- Pandas==1.1.5
+- TensorFlow==1.12.0
+- NumPy==1.19.5
+- SciPy==1.5.4
+- Scikit-learn==0.19.0
 
 **Datasets:**
 
