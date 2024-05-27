@@ -1,8 +1,8 @@
-# scEGA: Exogenous Gene Information-Assisted Single-Cell Deep Clustering Framework
-![Franework](https://github.com/DayuHuu/scEGA/blob/master/scEGA.png)
+# scEGG: Exogenous Gene Information-Assisted Single-Cell Deep Clustering Framework
+![Franework](https://github.com/DayuHuu/scEGA/blob/master/scEGG_framework.png)
 **Description:**
 
-scEGA is a deep clustering framework designed for single-cell analysis. It integrates cell and exogenous gene features simultaneously, aligning and fusing them during clustering to generate a more discriminative representation.
+scEGG is a deep clustering framework designed for single-cell analysis. It integrates cell and exogenous gene features simultaneously, aligning and fusing them during clustering to generate a more discriminative representation.
 
 **Requirements:**
 
@@ -15,9 +15,7 @@ scEGA is a deep clustering framework designed for single-cell analysis. It integ
 
 **Datasets:**
 
-- Biase: [GSE57249](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE57249)
 - Darmanis: [PubMed](https://pubmed.ncbi.nlm.nih.gov/26060301/)
-- Enge: [PubMed](https://pubmed.ncbi.nlm.nih.gov/28965763/)
 - Bjorklund: [GSE70580](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70580)
 - Sun: [GSE128066](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066)
 - Fink: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1534580722004932)
@@ -35,7 +33,7 @@ parser.add_argument('--label_path', default='data/Biase/label.ann', type=str, he
 ```
 **Implement:**
 ```python
-python scEGA.py
+python scEGG.py
 ```
 
 
