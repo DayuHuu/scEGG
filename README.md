@@ -1,4 +1,4 @@
-# scEGG: Exogenous Gene Information-Assisted Single-Cell Deep Clustering Framework
+# scEGG: Exogenous Gene-guided Single-Cell Deep Clustering Framework
 ![Franework](https://github.com/DayuHuu/scEGA/blob/master/scEGG_framework.png)
 **Description:**
 
