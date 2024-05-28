@@ -134,7 +134,7 @@ def getGraph(dataset_str, features, L, K, method):
     elif method == 'NE':
         co_matrix = np.corrcoef(features)
         
-        NE_path = 'result/NE_' + dataset_str + '.csv'
+        NE_path = '../result/NE_' + dataset_str + '.csv'
         if os.path.exists(NE_path):
             NE_matrix = pd.read_csv(NE_path).values
         else:
