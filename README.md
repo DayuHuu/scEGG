@@ -19,6 +19,8 @@ scEGG is a deep clustering framework designed for single-cell analysis. It integ
 - Bjorklund: [GSE70580](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70580)
 - Sun: [GSE128066](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE128066)
 - Fink: [ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S1534580722004932)
+- Zeisel: [PubMed](https://pubmed.ncbi.nlm.nih.gov/25700174/)
+- Fink: [PubMed](https://pubmed.ncbi.nlm.nih.gov/35914526/)
 
 **Examples:**
 
