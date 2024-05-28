@@ -6,12 +6,12 @@ scEGG is a deep clustering framework designed for single-cell analysis. It integ
 
 **Requirements:**
 
-
+- Python==3.7.0
 - Pandas==1.1.5
-- TensorFlow==1.12.0
-- NumPy==1.19.2
-- SciPy==1.1.0
-- Scikit-learn==0.19.0
+- Torch==1.13.1
+- NumPy==1.21.6
+- SciPy==1.7.3
+- Scikit-learn==0.22.2
 
 **Datasets:**
 
@@ -23,9 +23,8 @@ scEGG is a deep clustering framework designed for single-cell analysis. It integ
 **Examples:**
 
 ```python
-parser.add_argument('--dataset_str', default='Biase', type=str, help='single cell dataset')
-parser.add_argument('--n_clusters', default=3, type=int, help='number of clusters')
-parser.add_argument('--label_path', default='data/Biase/label.ann', type=str, help='true labels')
+parser.add_argument('--dataset_str', default='Bjorklund', type=str, help='name of dataset')
+parser.add_argument('--n_clusters', default=4, type=int, help='expected number of clusters')
 
 # Add other arguments as needed...
 
