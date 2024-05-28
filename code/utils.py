@@ -11,32 +11,32 @@ def target_distribution(q):
     weight = q ** 2 / q.sum(0)
     return (weight.t() / weight.sum(1)).t()
 def evaluate_model(X_tensor, Gene_tensor, edge_index, model, label_path, n_clusters):
-    # 将模型设置为评估模式
+
     model.eval()
 
-    # 从模型获取嵌入的数据
+
     _,_,Z_c,_  = model(X_tensor, Gene_tensor, edge_index)
 
 
-    # 使用KMeans进行聚类
+
     kmeans = KMeans(n_clusters=n_clusters,n_init=20,random_state=1)
     kmeans.fit(Z_c.data.cpu().numpy())
     y_pred = kmeans.labels_
 
-    # 从文件加载真实标签
+
     y_true = pd.read_csv(label_path, sep='\t').values
     y_true = y_true[:, -1].astype(int)
 
-    # 计算评估指标
+
     acc, nmi, pur, fscore, precision, recall, ari = evaluate(y_true, y_pred)
 
-    # 四舍五入指标到四位小数
+
     acc = float(np.round(acc, 3))
     nmi = float(np.round(nmi, 3))
     pur = float(np.round(pur, 3))
     ari = float(np.round(ari, 3))
 
-    # 返回评估结果
+
     return ari, nmi, acc, pur
 
 
