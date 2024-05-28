@@ -32,7 +32,7 @@ parser.add_argument('--n_clusters', default=4, type=int, help='expected number o
 ```
 **Implement:**
 ```python
-python scEGG.py
+python run_scEGG.py
 ```
 
 
