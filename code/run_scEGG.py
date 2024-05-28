@@ -44,19 +44,19 @@ random.seed(seed)
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-# 目录创建
-if not os.path.exists('logs/'):
-    os.makedirs('logs/')
-if not os.path.exists('result/'):
-    os.makedirs('result/')
 
-# 文件路径配置
-data_path = f'data/{args.dataset_str}/{args.dataset_str}_data.csv'
-label_path = f'data/{args.dataset_str}/label.ann'
-genemap_path = f'data/{args.dataset_str}/{args.dataset_str}.emb'
-model_path = f'logs/model_{args.dataset_str}.h5'
+if not os.path.exists('../logs/'):
+    os.makedirs('../logs/')
+if not os.path.exists('../result/'):
+    os.makedirs('../result/')
 
-# 数据加载
+
+data_path = f'../data/{args.dataset_str}/{args.dataset_str}_data.csv'
+label_path = f'../data/{args.dataset_str}/label.ann'
+genemap_path = f'../data/{args.dataset_str}/{args.dataset_str}.emb'
+model_path = f'../logs/model_{args.dataset_str}.h5'
+
+
 A, X, cells, genes = load_data(data_path, args.dataset_str, args.is_NE, args.n_clusters, args.k_neigh)
 X_dim = X.shape[1]
 
@@ -75,7 +75,7 @@ optimizer = optim.Adam(model.parameters(), lr=args.learning_rate)
 
 model.train()
 ari_best, epoch_save = 0, 0
-stop_patience = 500
+stop_patience = 50
 for epoch in range(args.epochs):
     optimizer.zero_grad()
     A_hat, X_hat, Z_c, q = model(X_tensor, Gene_tensor, edge_index)
@@ -95,7 +95,7 @@ for epoch in range(args.epochs):
         if ari > ari_best:
             ari_best, epoch_save, nmi_bset = ari, epoch, nmi
             torch.save(model.state_dict(), model_path)
-    # 早停检查
+
     if epoch - epoch_save >= stop_patience:
         print(f'Stopping early at epoch {epoch + 1}. Best ARI: {ari_best:.4f} at epoch {epoch_save + 1}')
         break
@@ -103,13 +103,13 @@ for epoch in range(args.epochs):
 
 model.load_state_dict(torch.load(model_path))
 model.eval()
-# 从模型获取嵌入的数据
+
 _, _, Z_c, _ = model(X_tensor, Gene_tensor, edge_index)
 kmeans = KMeans(n_clusters=args.n_clusters, n_init=20, random_state=1)
 kmeans.fit(Z_c.data.cpu().numpy())
 y_pred = kmeans.labels_
 
-# 从文件加载真实标签
+
 y_true = pd.read_csv(label_path, sep='\t').values
 y_true = y_true[:, -1].astype(int)
 
