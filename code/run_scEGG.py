@@ -32,7 +32,6 @@ args = parser.parse_args()
 
 if args.dataset_str == "Bjorklund":
     args.epochs = 200
-    seed = 246
 
 os.environ['PYTHONHASHSEED'] = str(seed)
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
