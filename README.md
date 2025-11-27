@@ -52,6 +52,24 @@ We evaluated scEGG on several benchmark single-cell datasets. The original data 
 
 -----
 
+## 🧬 Gene Representation Construction
+
+To fully utilize the **scEGG** framework, it is essential to construct exogenous gene representations before training the model. These embeddings introduce external biological knowledge (e.g., from PPI networks) to guide the clustering process.
+
+Detailed instructions and scripts for generating these embeddings can be found in the guide:  
+👉 [**Produce_Gene_Emb.md**](https://github.com/DayuHuu/scEGG/blob/master/data/Produce_Gene_Emb.md)
+
+### Example: Generating Embeddings for Bjorklund
+To run scEGG on the **Bjorklund** dataset, you must first generate the corresponding gene embedding file (`Bjorklund.emb`).
+
+1.  **Prepare Data:** Ensure the Bjorklund dataset is correctly placed in the data directory.
+2.  **Run Generation Script:** Follow the instructions in `Produce_Gene_Emb.md` to process the gene interaction network.
+3.  **Output:** The process will yield a `Bjorklund.emb` file.
+
+> **Note:** Ensure the generated `.emb` file matches the dataset name specified in your configuration (e.g., `Bjorklund`) so the model can load it automatically.
+
+-----
+
 ## 🚀 Usage
 
 ### 1\. Configuration
